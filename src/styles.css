@@ -1,0 +1,254 @@
+/*
+|------------------------------------------------------------------------------
+| RESET
+|------------------------------------------------------------------------------
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+|------------------------------------------------------------------------------
+| TYPOGRAPHY
+|------------------------------------------------------------------------------
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'vendetta', serif;
+  font-size: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 2.2em;
+	margin-bottom: 30px;
+}
+
+.encounter-title {
+	text-align: center;
+	text-transform: capitalize;
+}
+
+/*
+|------------------------------------------------------------------------------
+| LAYOUT
+|------------------------------------------------------------------------------
+*/
+
+body {
+	padding: 40px 0;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1000px;
+}
+
+/*
+|------------------------------------------------------------------------------
+| FORMS
+|------------------------------------------------------------------------------
+*/
+
+input,
+textarea,
+button {
+	font-family: 'vendetta', serif;
+	font-size: inherit;
+}
+
+.create-encounter {
+	font-size: 1.6em;
+}
+
+	.create-encounter input {
+		margin-right: 20px;
+	}
+
+.current-hp {
+	border: 0;
+	background: #eee;
+	text-align: center;
+	width: 30px;
+	padding: 4px;
+}
+
+
+.delete-combatant {
+	color: firebrick;
+	border: 0;
+	background: none;
+	font-size: 150%;
+}
+.delete-combatant:hover {
+	cursor: pointer;
+}
+
+.create-combatant {
+	padding: 10px;
+	background: #ddd;
+}
+	.create-combatant input,
+	.create-combatant select,
+	.create-combatant button {
+		padding: 5px;
+		margin-right: 10px;
+	}
+	.create-combatant input,
+	.create-combatant button {
+		font-size: 1.2em;
+	}
+	.create-combatant button:hover {
+		cursor: pointer;
+	}
+
+.death-button {
+	width: 23px;
+	height: 23px;
+	border: 0;
+	background: none;
+	font-size: 0;
+	background: url('../public/img/skull.svg') no-repeat;
+}
+.death-button:hover {
+	cursor: pointer;
+}
+
+	.death-button img {
+		width: 26px;
+	}
+
+.increment-button {
+	border: none;
+	background: #ddd;
+	width: 25px;
+	height: 25px;
+	border-radius: 12px;
+}
+.increment-button:hover {
+	cursor: pointer;
+}
+
+/*
+|------------------------------------------------------------------------------
+| TABLES
+|------------------------------------------------------------------------------
+*/
+
+th {
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+/*
+|------------------------------------------------------------------------------
+| OBJECTS
+|------------------------------------------------------------------------------
+*/
+
+.combatants-table {
+	width: 100%;
+	margin-bottom: 40px;
+	font-size: 1.3em;
+}
+
+	.combatant-row-dead {
+		opacity: 0.4;
+	}
+
+		.combatants-table td {
+			text-align: center;
+		}
+		.combatants-table th {
+			line-height: 1;
+		}
+		.combatants-table th,
+		.combatants-table td {
+			padding: 3px 0;
+			border-bottom: 1px solid #ccc;
+			vertical-align: middle;
+		}
+		.combatants-table tr:last-child th,
+		.combatants-table tr:last-child td {
+			border-bottom: none;
+		}
+		.current-hp-cell {
+			position: relative;
+		}
+		.current-hp-cell:after {
+			position: absolute;
+			top: 8px;
+			right: 0;
+			display: block;
+			content: '';
+			width: 1px;
+			height: 30px;
+			background: #bbb;
+			transform: rotate(13deg);
+		}
+
+		.combatant-type {
+			font-size: 0.7em;
+			text-transform: uppercase;
+			color: #555;
+		}
+
+/*
+|------------------------------------------------------------------------------
+| HELPERS
+|------------------------------------------------------------------------------
+*/
+
+.spacer {
+	margin: 0 10px;
+}
